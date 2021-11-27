@@ -4,13 +4,14 @@ html {
 
 header {
     background-color: #1F2937;
-    color: white;
+    color: #F9FAF8;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-weight: 700;
     padding: 0 50px;
     padding-bottom: 50px;
+    cursor: pointer;
 }
 
 footer {
@@ -21,12 +22,6 @@ footer {
     padding: 25px;
 }
 
-ul {
-    display: flex;
-    gap: 10px;
-    list-style-type: none;
-}
-
 li {
     font-size: 12px;
 }
@@ -35,6 +30,17 @@ h1 {
     font-size: 48px;
     font-weight: 900;
     color: #F9FAF8;
+}
+
+a {
+    text-decoration: none;
+    color: #F9FAF8;
+}
+
+#headerlinks {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
 }
 
 .section1 {
@@ -49,16 +55,18 @@ h1 {
 .landing-text {
     flex-direction: column;
     color: #F9FAF8;
+    max-width: 50%;
 }
 
 .section1 img {
     width: 400px;
-    height: 150px;
+    height: 200px;
     background-color: grey;
     text-align: center;
     line-height: 150px;
-    padding: 25px;
+    padding: 5px;
     color: #F9FAF8;
+    margin-left: 25px;
 }
 
 .section1 button {
@@ -115,11 +123,11 @@ h1 {
 }
 
 .section3 .quote {
-    max-width: 500px;
+    max-width: 800px;
     height: auto;
     font-style: italic;
     color: #1F2937;
-    font-size: 36px;
+    font-size: 26px;
 }
 
 .section3 .signature {
@@ -142,6 +150,8 @@ h1 {
 
 .section4 .signup-banner {
     background-color: #3882F6;
+    border-radius: 10%;
+    border: 2px groove black;
     color: #F9FAF8;
     padding: 25px;
     display: flex;
@@ -157,5 +167,28 @@ h1 {
     align-self: center;
     margin-left: 50px;
     border-radius: 10%;
+    border: 1px groove black;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.tooltip .tooltipimg {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltipimg {
+    visibility: visible;
+}
